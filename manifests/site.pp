@@ -1,6 +1,9 @@
 node default {}
 
 node 'node1' {
+  package { 'nginx':
+    ensure => installed,
+  }
   class {'apache':
     default_vhost => false,
     default_mods  => false,
